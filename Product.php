@@ -14,6 +14,12 @@ class Product {
         $this->category = $category;
     }
 
+    public function setPrice($price) {
+        if(!is_numeric($price)) {
+            throw new Exception('Il prezzo non é valido');
+        }
+    }
+
     public function getName() {
         return $this->name;
     }
